@@ -24,6 +24,11 @@
 			<artifactId>kafka_2.12</artifactId>
 			<version>1.1.0</version>
 		</dependency>
+		<dependency>
+            <groupId>io.github.adrianulbona</groupId>
+            <artifactId>jts-discretizer</artifactId>
+            <version>0.1.0</version>
+        </dependency>
 	</dependencies>
 	<description>Provides common Data Formats as well as serializers/deserializers for them.</description>
 </project>

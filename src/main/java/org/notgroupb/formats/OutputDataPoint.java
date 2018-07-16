@@ -2,6 +2,8 @@ package org.notgroupb.formats;
 
 import java.time.LocalDateTime;
 
+import ch.hsr.geohash.GeoHash;
+
 public class OutputDataPoint {
 	
 	private String name; 
@@ -61,7 +63,12 @@ public class OutputDataPoint {
                 " \"recordTime\":\"" +this.recordTime +"\","+
                 " \"lat\":" +this.lat +","+
                 " \"lon\":" +this.lon +","+
-                " \"score\":" +this.score +" }";
+                " \"score\":" +this.score +
+                " \"geohash\":" + toGeoHash() + "}";
     }
+	
+	private String toGeoHash() {
+		return GeoHash.geoHashStringWithCharacterPrecision(this.lat, this.lon, 7);
+	}
 
 }
