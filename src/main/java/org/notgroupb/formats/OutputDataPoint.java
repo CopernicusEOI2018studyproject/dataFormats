@@ -63,8 +63,8 @@ public class OutputDataPoint {
                 " \"recordTime\":\"" +this.recordTime +"\","+
                 " \"lat\":" +this.lat +","+
                 " \"lon\":" +this.lon +","+
-                " \"score\":" +this.score +
-                " \"geohash\":" + toGeoHash() + "}";
+                " \"score\":" +this.score + "," +
+                " \"geohash\":\"" + toGeoHash() + "\"}";
     }
 	
 	private String toGeoHash() {
